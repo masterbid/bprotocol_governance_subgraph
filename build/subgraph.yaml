@@ -1,6 +1,6 @@
 specVersion: 0.0.2
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum/contract
     name: Migrate
@@ -21,7 +21,7 @@ dataSources:
         - Voted
       abis:
         - name: Migrate
-          file: ./abis/Migrate.json
+          file: Migrate\abis\Migrate.json
       eventHandlers:
         - event: Executed(indexed uint256)
           handler: handleExecuted
@@ -33,4 +33,4 @@ dataSources:
           handler: handleVoteCancelled
         - event: Voted(indexed uint256,address,uint256)
           handler: handleVoted
-      file: ./src/mapping.ts
+      file: Migrate\Migrate.wasm

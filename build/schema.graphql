@@ -3,7 +3,6 @@ type Proposal @entity {
   id: ID!
   proposalNo: BigInt!
   owner: User!
-  totalVotes: BigInt!
   voted: [Voted!]! @derivedFrom(field: "proposal")
   voteCancelled: [VoteCancelled!]! @derivedFrom(field: "proposal")
   queued: Boolean!
